@@ -1,5 +1,6 @@
 package com.example.bmicalculator
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             }
                 val height: Int = heightEditText.text.toString().toInt()
                 val weight: Int = weightEditText.text.toString().toInt()
+            val intent = Intent(this, ResultActivity::class.java)
+            intent.putExtra("height", height)
+            intent.putExtra("weight", weight)
+            startActivity(intent)
         }
     }
 }
