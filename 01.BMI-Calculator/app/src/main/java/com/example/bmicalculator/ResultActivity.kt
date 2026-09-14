@@ -14,7 +14,7 @@ class ResultActivity: AppCompatActivity() {
 //        setContentView(binding.root)
         setContentView(R.layout.activity_result)
         var resultText = findViewById<TextView>(R.id.resultText)
-
+        var bmiText = findViewById<TextView>(R.id.bmiText)
         val height = intent.getIntExtra("height", 0)
         val weight = intent.getIntExtra("weight", 0)
         val bmi = weight / (height / 100.0).pow(2.0)
@@ -28,9 +28,7 @@ class ResultActivity: AppCompatActivity() {
             else -> "저체중"
         }
 
+        bmiText.text = bmi.toString()
         resultText.text = diagnosis
-
-
-
     }
 }
