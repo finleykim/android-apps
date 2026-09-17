@@ -59,6 +59,14 @@ class MainActivity : AppCompatActivity() {
             }
         } else {
             for (i in 0..<numbers.size) {
+                var background = when (numbers[i]) {
+                    in 1..10 -> R.drawable.circle_yellow
+                    in 11..20 -> R.drawable.circle_blue
+                    in 21..30 -> R.drawable.circle_red
+                    in 31..40 -> R.drawable.circle_gray
+                    else -> R.drawable.circle_green
+                }
+                numberTextViewList[i].setBackgroundResource(background)
                 numberTextViewList[i].text = numbers[i].toString()
                 numberTextViewList[i].visibility = View.VISIBLE
             }
