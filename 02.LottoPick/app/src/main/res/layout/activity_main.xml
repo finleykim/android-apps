@@ -48,6 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -57,6 +59,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -66,6 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -75,6 +81,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -84,6 +92,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -99,5 +119,5 @@
         android:text="번호추첨"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
