@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun refreshNumbers()  {
-        if (didRun) {
+        if (didRun || numbers.size == 0) {
             numberTextViewList.forEachIndexed { index, textView ->
                 textView.visibility = View.GONE
             }
@@ -77,6 +77,9 @@ class MainActivity : AppCompatActivity() {
         runButton.setOnClickListener {
             val maxNum = 5
             var randomNum = 0
+            if (numbers.size >= 6) {
+                Toast.makeText(this,"초기화 후 다시 시도해주세요",Toast.LENGTH_SHORT).show()
+            }
             while (numbers.size < 6) {
                 randomNum = (1..45).random()
                 if (numbers.contains(randomNum)) {
@@ -116,7 +119,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initClearButton() {
         clearButton.setOnClickListener {
-            if (didRun) {
+            if (numbers.size > 0) {
                 numbers.clear()
                 refreshNumbers()
                 didRun = false
