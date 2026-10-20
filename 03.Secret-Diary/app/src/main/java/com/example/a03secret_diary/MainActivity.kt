@@ -1,6 +1,7 @@
 package com.example.a03secret_diary
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.provider.Settings.Global.putString
@@ -67,7 +68,7 @@ class MainActivity : AppCompatActivity() {
             val passwordPreference = getSharedPreferences("password", Context.MODE_PRIVATE)
             val passwordFromUser = "${numberPicker1.value}${numberPicker2.value}${numberPicker3.value}"
             if (passwordPreference.getString("password", "000").equals(passwordFromUser)) {
-                //패스워드 일치
+                startActivity(Intent(this, DiaryActivity::class.java))
             } else {
                 showErrorAlertDialog()
             }
